@@ -1,101 +1,185 @@
 const data = {
-  "profileImage": "portfolio/profile.jpeg",
+  profileImage: "/profileImage.jpeg",
 
-  "hero": {
-    "location": "Currently based in California — open to relocate",
-    "name": "Alex Johnson",
-    "title": "Full-Stack Developer & UI/UX Enthusiast",
-    "description": "I create innovative, user-friendly web applications using modern technologies like React.js, Node.js, and MongoDB. With 2+ years of experience in full-stack development, I am dedicated to building seamless digital experiences that combine beautiful design with robust functionality. I thrive on solving complex problems and continuously learning new technologies to deliver exceptional results."
+  hero: {
+    location: "Currently based in India — open to relocate & work remotely",
+    name: "Taoseef Raza",
+    title: "Full-Stack Developer & UI/UX Enthusiast",
+    description:
+      "I’m Taoseef Raza, an MCA student, learning to build modern web applications using technologies like React.js, Node.js and MongoDB. I enjoy turning ideas into clean, responsive UIs and understanding how frontend and backend connect. This portfolio is a part of my journey towards becoming a confident full-stack developer."
   },
 
-  "about": {
-    "paragraphs": [
-      "My name is Alex Johnson, and I am a Full-Stack Developer with 2+ years of hands-on experience building modern web applications. I specialize in creating responsive user interfaces with React.js and developing scalable backend systems using Node.js and Express.",
-      "I have strong expertise in both frontend and backend technologies, working with JavaScript, TypeScript, databases like MongoDB and PostgreSQL, and cloud platforms. This comprehensive skill set enables me to handle complete project lifecycles from concept to deployment.",
-      "Throughout my career, I've collaborated with startups, educational institutions, and enterprise clients to deliver high-quality software solutions. I'm passionate about writing clean, maintainable code and staying current with industry best practices and emerging technologies.",
-      "When I'm not coding, I enjoy hiking, photography, and exploring new coffee shops. I'm always eager to take on new challenges and contribute to meaningful projects with talented teams."
+  about: {
+    paragraphs: [
+      "My name is Taoseef Raza, and I am an MCA student. I started with core programming concepts and slowly moved into web development because I enjoy creating real, usable applications instead of just theory.",
+      "I am learning full-stack development with a focus on React.js on the frontend and Node.js/Express on the backend. Along the way, I’m also getting comfortable with JavaScript, TypeScript and databases like MongoDB and PostgreSQL so that I can understand the complete flow of a web application.",
+      "Most of my growth comes from self-study, mini-projects, hackathons and practice sessions. I like to write code step by step, clean up my own mistakes and keep improving my logic and structure. I’m also interested in UI/UX, so I try to keep my interfaces simple, readable and user-friendly.",
+      "When I’m not coding, I think about career planning, explore new tech tools and try to help friends with their doubts whenever I can. I believe consistent effort matters more than speed, and I want to keep learning until I can contribute to meaningful real-world projects with a good team."
     ]
   },
 
-  "languages": [
-    { "name": "HTML5", "img": "icons/html5.png" },
-    { "name": "CSS3", "img": "icons/css3.png" },
-    { "name": "JavaScript", "img": "icons/javascript.png" },
-    { "name": "TypeScript", "img": "icons/typescript.png" },
-    { "name": "React", "img": "icons/react.png" },
-    { "name": "Tailwind", "img": "icons/tailwind.png" }
+  languages: [
+    { name: "HTML5",      img: "html5.jpg" },
+    { name: "CSS3",       img: "css3.png" },
+    { name: "JavaScript", img: "javascript.png" },
+    { name: "TypeScript", img: "icons8-typescript-48.png" },
+    { name: "React",      img: "icons8-react-100.png" },
+    { name: "Tailwind",   img: "tailwind.png" }
   ],
 
-  "socialLinks": [
-    { "icon": "linkedin", "href": "https://linkedin.com/in/alexjohnson" },
-    { "icon": "github", "href": "https://github.com/alexjohnson" },
-    { "icon": "instagram", "href": "https://instagram.com" },
-    { "icon": "twitter", "href": "https://twitter.com" }
-  ],
+socialLinks: [
+  { icon: "linkedin", href: "https://www.linkedin.com/in/taoseef-raza-777n?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
+  { icon: "github", href: "https://github.com/taoseefr15" },
+  { icon: "instagram", href: "https://www.instagram.com/taoseef.razaa?igsh=d3dsdWNwNzc1MWgw" },
+  { icon: "x", href: "https://x.com/taoseefr15" }   
+],
 
-  "experience": [
+
+  experience: [
     {
-      "company": "TechEd Solutions, USA",
-      "role": "Software Instructor",
-      "period": "2024 - Present",
-      "description": "Teaching web development fundamentals including HTML, CSS, JavaScript, React, Python, and database design to students of all skill levels.",
-      "skills": ["HTML", "CSS", "JavaScript", "React", "Python", "Node.js", "SQL", "Web Design", "Database"]
+      company: "Self-Study & Practice Projects",
+      role: "Full-Stack Learner",
+      period: "2023 - Present",
+      description:
+        "Learning full-stack development through documentation, online resources and personal practice projects. Building small React interfaces, experimenting with Node.js/Express APIs and improving problem-solving with DSA in Java and JavaScript.",
+      skills: [
+        "React.js",
+        "Node.js",
+        "JavaScript",
+        "TypeScript",
+        "MongoDB",
+        "REST API",
+        "Java",
+        "DSA",
+        "Git"
+      ]
     },
     {
-      "company": "Digital Innovations Inc, USA",
-      "role": "Full Stack Developer",
-      "period": "2023 - 2024",
-      "description": "Developed full-stack web applications using MERN stack with focus on performance optimization and user experience.",
-      "skills": ["React.js", "Node.js", "Express", "MongoDB", "REST API", "TypeScript", "Git", "AWS", "PostgreSQL"]
+      company: "Samanyastra Hackathon 2025",
+      role: "Frontend Developer (Participant)",
+      period: "2025",
+      description:
+        "Participated in the Samanyastra Hackathon, working on a React-based portfolio application. Focused on component structure, responsive layouts, clean design and following strict rules for data-driven UI without hard-coding.",
+      skills: [
+        "React.js",
+        "Vite",
+        "Responsive Design",
+        "Component Architecture",
+        "CSS",
+        "Problem Solving",
+        "Team Communication"
+      ]
     },
     {
-      "company": "WebCraft Studios, Remote",
-      "role": "Frontend Developer",
-      "period": "2022 - 2023",
-      "description": "Built responsive web interfaces and single-page applications using modern frontend frameworks and best practices.",
-      "skills": ["React.js", "Vue.js", "SASS", "CSS3", "JavaScript", "Responsive Design", "API Integration", "Redux", "Webpack"]
+      company: "Online Courses & Tutorials",
+      role: "Web Development Learner",
+      period: "2023 - Present",
+      description:
+        "Completed multiple online tutorials and mini-courses on HTML, CSS, JavaScript, React and backend basics. Used these resources to strengthen fundamentals and then applied the concepts in my own small projects.",
+      skills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React.js",
+        "Node.js",
+        "Learning by Doing"
+      ]
     },
     {
-      "company": "HealthTech Solutions, San Francisco",
-      "role": "Junior Web Developer",
-      "period": "2021 - 2022",
-      "description": "Contributed to healthcare web platform development with focus on accessibility and HIPAA compliance.",
-      "skills": ["React.js", "TypeScript", "Node.js", "PostgreSQL", "Docker", "Jest", "Accessibility"]
+      company: "Programming Fundamentals",
+      role: "C & Java Learner",
+      period: "2022 - 2024",
+      description:
+        "Learnt programming fundamentals like loops, functions, arrays, pointers and OOP concepts using C and Java. Wrote basic console applications, understood memory concepts and started practising DSA topics.",
+      skills: [
+        "C Programming",
+        "Java",
+        "OOP",
+        "Data Structures",
+        "Algorithms",
+        "Debugging"
+      ]
     },
     {
-      "company": "GreenLeaf Wellness Center, Portland",
-      "role": "Web Developer Intern",
-      "period": "2020 - 2021",
-      "description": "Developed and maintained company website with booking system, blog, and customer management features.",
-      "skills": ["JavaScript", "PHP", "MySQL", "WordPress", "HTML5", "CSS3", "jQuery"]
+      company: "Peer Mentoring & Doubt Support",
+      role: "Informal Mentor",
+      period: "2023 - Present",
+      description:
+        "Helped friends and classmates with topics like C programming, basic Java, HTML/CSS and exam preparation. Explaining topics to others improved my own understanding and communication skills.",
+      skills: [
+        "Teaching",
+        "Communication",
+        "C",
+        "Java",
+        "HTML",
+        "CSS",
+        "Notes Making"
+      ]
     },
     {
-      "company": "Freelance Projects, Remote",
-      "role": "Freelance Developer",
-      "period": "2019 - Present",
-      "description": "Creating custom web solutions for small businesses and startups. Specializing in e-commerce and business websites.",
-      "skills": ["React.js", "Next.js", "Node.js", "MongoDB", "Stripe", "Vercel", "SEO", "Web Design"]
+      company: "Future Opportunities",
+      role: "Aspiring Full-Stack Developer",
+      period: "Open to Work",
+      description:
+        "Actively preparing for internships and entry-level roles in web development. Interested in backend development with Java/Node.js, frontend with React and using AI tools to build smarter applications and customer support solutions.",
+      skills: [
+        "Career Planning",
+        "Portfolio Building",
+        "React.js",
+        "Node.js",
+        "Java",
+        "Problem Solving",
+        "AI Tools"
+      ]
     }
   ],
 
-  "projects": [
+  projects: [
     {
-      "title": "SmartShop - E-commerce Platform",
-      "image": "/images/smartshop.jpg",
-      "description": "A full-featured e-commerce platform with payment integration, inventory management, and admin dashboard.",
-      "tech": ["React.js", "Node.js", "MongoDB", "Stripe", "Redux", "Express", "JWT", "AWS S3"]
+      title: "SmartShop - E-commerce Platform",
+      image: "/smartshop.jpg",
+      description:
+        "A concept e-commerce platform designed as a learning project with product listing, cart flow and order summary screens. Focused on clean UI, responsive layout and reusable React components. Future plan is to connect it with a Node.js + MongoDB backend.",
+      tech: [
+        "React.js",
+        "JavaScript",
+        "Component Design",
+        "Responsive UI",
+        "Node.js (planned)",
+        "MongoDB (planned)"
+      ]
     },
     {
-      "title": "TaskMaster Pro - Project Management",
-      "image": "/images/taskmaster.jpg",
-      "description": "Collaborative project management tool with real-time updates, task tracking, and team communication features.",
-      "tech": ["Next.js", "TypeScript", "Socket.io", "PostgreSQL", "Prisma", "Tailwind CSS", "Docker"]
+      title: "TaskMaster Pro - Project Management",
+      image: "/taskmaster.jpg",
+      description:
+        "A project management dashboard prototype to practise layouts, card-based design and state handling. Includes sections for tasks, status tags and team notes. Built mainly to understand how real-world SaaS dashboards are structured.",
+      tech: [
+        "React.js",
+        "TypeScript (learning)",
+        "State Management",
+        "CSS",
+        "UI/UX",
+        "Dashboard Layouts"
+      ]
     },
     {
-      "title": "WeatherNow - Weather Dashboard",
-      "image": "portfolio/weather.jpeg",
-      "description": "Real-time weather application with forecasts, maps, and personalized weather alerts.",
-      "skills": ["React.js", "TypeScript", "OpenWeather API", "Mapbox", "Chart.js", "Material-UI", "PWA"]
+      title: "WeatherNow - Weather Dashboard",
+      image: "/weathernow.jpg",
+      description:
+        "A weather dashboard UI created to practise working with APIs, cards and data-driven components. Uses sample data at the moment, with plans to integrate the OpenWeather API for live data and add charts for hourly forecasts.",
+      tech: [
+        "React.js",
+        "API Integration (planned)",
+        "JavaScript",
+        "Charts (planned)",
+        "Responsive Design",
+        "Material-UI (learning)"
+      ]
     }
   ]
-}
+};
+
+export default data;
+
+

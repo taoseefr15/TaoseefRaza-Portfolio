@@ -1,0 +1,439 @@
+/* Portfolio.css — Apple-inspired, handcrafted look */
+
+/* variables */
+:root{
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --muted: #6b7078;
+  --text: #0f1720;
+  --accent: #0a66f0;
+  --radius-xl: 28px;
+  --radius-lg: 18px;
+  --soft-shadow: 0 18px 40px rgba(12,18,24,0.06);
+  --soft-shadow-2: 0 10px 28px rgba(12,18,24,0.04);
+  --glass: rgba(255,255,255,0.85);
+  --maxw: 1180px;
+}
+
+/* dark */
+[data-theme="dark"]{
+  --bg: #08080a;
+  --card: #0f1114;
+  --text: #e9eef6;
+  --muted: #9aa0a8;
+  --soft-shadow: 0 28px 70px rgba(0,0,0,0.6);
+  --glass: rgba(16,18,20,0.35);
+}
+
+/* base reset */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* container */
+.container{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:18px;
+}
+
+/* nav */
+.top-nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:8px 0;
+}
+.top-nav .links{
+  display:flex;
+  gap:18px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* hero */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:36px;
+  align-items:center;
+  padding:12px 0;
+}
+@media(max-width:980px){
+  .hero{
+    grid-template-columns:1fr;
+  }
+}
+.hero .title-eyebrow{
+  font-size:11px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.hero h1{
+  font-size:clamp(1.9rem,3.2vw,2.6rem);
+  margin:6px 0 8px;
+  font-weight:800;
+  line-height:1.02;
+}
+.hero p.lead{
+  max-width:66ch;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.75;
+}
+
+/* hero CTA row (buttons) */
+.hero-cta-row{
+  margin-top:16px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* CTA buttons */
+.cta{
+  background:var(--accent);
+  color:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+  border:0;
+  cursor:pointer;
+  box-shadow:0 8px 22px rgba(10,60,120,0.12);
+  font-size:14px;
+}
+.cta.secondary{
+  background:transparent;
+  border:1px solid rgba(0,0,0,0.06);
+  color:var(--text);
+}
+
+/* (old) social row – not used now but kept */
+.social-row{
+  display:flex;
+  gap:8px;
+  margin-top:12px;
+}
+
+/* ✅ NEW: hero social icons row */
+.hero-social-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:10px;
+}
+
+/* ✅ NEW: individual social pill buttons */
+.hero-social-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:32px;
+  border-radius:999px;
+  background:rgba(0,0,0,0.05);
+  color:var(--text);
+  text-decoration:none;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.hero-social-link:hover{
+  transform:translateY(-2px);
+  background:rgba(0,0,0,0.08);
+  box-shadow:0 6px 18px rgba(12,18,24,0.18);
+}
+.hero-social-link svg{
+  display:block;
+}
+
+/* hero image card (rounded rectangle with soft shadow) */
+.hero-photo-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.hero-photo{
+  width:200px;
+  height:200px;
+  border-radius:26px;
+  object-fit:cover;
+  box-shadow: var(--soft-shadow);
+  border:1px solid rgba(255,255,255,0.6);
+  transition:transform .25s, box-shadow .25s;
+}
+.hero-photo:hover{
+  transform:translateY(-6px);
+}
+
+/* decorative orbs - subtle */
+.hero-orb{
+  position:absolute;
+  border-radius:999px;
+  filter:blur(28px);
+  opacity:.45;
+  pointer-events:none;
+}
+.hero-orb.a{
+  width:220px;
+  height:220px;
+  background:linear-gradient(135deg, rgba(74,163,255,0.12), rgba(0,113,227,0.08));
+  top:-30px;
+  right:6%;
+}
+.hero-orb.b{
+  width:120px;
+  height:120px;
+  background:linear-gradient(135deg, rgba(255,255,255,0.88), rgba(255,255,255,0.06));
+  bottom:-24px;
+  left:2%;
+}
+@keyframes orbFloat{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(10px)}
+  100%{transform:translateY(0)}
+}
+.hero-orb.a,
+.hero-orb.b{
+  animation:orbFloat 7s ease-in-out infinite;
+}
+
+/* section base & reveal */
+.section{
+  padding:36px 0;
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .55s ease, transform .55s ease;
+}
+.section.inview{
+  opacity:1;
+  transform:none;
+}
+.section h2{
+  font-size:20px;
+  margin:0 0 12px;
+  font-weight:700;
+}
+
+/* About */
+.about p{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:15px;
+}
+
+/* Skills */
+.skills-row{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.skill-card{
+  width:calc((100% - 5*14px)/6);
+  min-width:140px;
+  background:var(--card);
+  border-radius:12px;
+  padding:12px;
+  border:1px solid rgba(0,0,0,0.04);
+  display:flex;
+  gap:12px;
+  align-items:center;
+  box-shadow:var(--soft-shadow-2);
+  transition:transform .18s;
+}
+.skill-card:hover{
+  transform:translateY(-6px);
+}
+@media(max-width:900px){
+  .skill-card{width:48%;}
+}
+
+/* icon wrapper */
+.skill-icon-wrap{
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg,#fff,#f6f8fb);
+  border:1px solid rgba(0,0,0,0.04);
+}
+.skill-icon{
+  width:28px;
+  height:28px;
+}
+
+/* progress */
+.skill-meter{
+  height:8px;
+  background:rgba(0,0,0,0.04);
+  border-radius:999px;
+  overflow:hidden;
+  margin-top:8px;
+}
+.skill-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),#4aa3ff);
+  transition:width .6s;
+}
+
+/* Experience cards grid */
+.experience-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  margin-top:18px;
+}
+@media(min-width:1200px){
+  .experience-grid{grid-template-columns:repeat(2,1fr);}
+}
+.exp-card{
+  position:relative;
+  padding:14px;
+  border-radius:18px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.92), rgba(245,247,250,0.94));
+  border:1px solid rgba(255,255,255,0.6);
+  box-shadow:0 20px 50px rgba(12,18,24,0.06);
+  transition:transform .18s;
+}
+.exp-card:hover{
+  transform:translateY(-6px);
+}
+.exp-row{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.exp-avatar{
+  width:46px;
+  height:46px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#0b66d6,#46a6ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-weight:700;
+  box-shadow:0 8px 22px rgba(12,18,24,0.06);
+}
+.tag{
+  font-size:12px;
+  padding:6px 9px;
+  border-radius:999px;
+  background:rgba(0,0,0,0.04);
+  color:var(--muted);
+}
+
+/* Projects */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+.project{
+  background:var(--card);
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,0.04);
+  box-shadow:0 18px 40px rgba(12,18,24,0.06);
+  transition:transform .18s;
+}
+.project:hover{
+  transform:translateY(-8px);
+}
+.project .imgwrap{
+  height:220px;
+  overflow:hidden;
+  background:linear-gradient(180deg,#eef2f6,#e9edf2);
+}
+.project img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .4s;
+}
+.project:hover img{
+  transform:scale(1.03);
+}
+.project .content{
+  padding:12px 14px 18px;
+}
+
+/* footer */
+.footer{
+  margin-top:28px;
+  color:var(--muted);
+  font-size:13px;
+  padding-bottom:30px;
+}
+
+/* small utilities */
+.row{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.chips{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.search{
+  margin-top:8px;
+  min-width:220px;
+  padding:8px;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,0.04);
+}
+
+/* stagger reveal delays for cards */
+.exp-card,
+.project,
+.skill-card{
+  opacity:0;
+  transform:translateY(8px);
+  transition:opacity .55s ease, transform .55s ease;
+}
+.section.inview .exp-card,
+.section.inview .project,
+.section.inview .skill-card{
+  opacity:1;
+  transform:none;
+}
+.exp-card:nth-child(1){transition-delay:0.04s}
+.exp-card:nth-child(2){transition-delay:0.08s}
+.exp-card:nth-child(3){transition-delay:0.12s}
+.project:nth-child(1){transition-delay:0.05s}
+.project:nth-child(2){transition-delay:0.09s}
+.project:nth-child(3){transition-delay:0.13s}
+
+/* accessibility */
+@media(prefers-reduced-motion:reduce){
+  .hero-orb,
+  .project img,
+  .project,
+  .exp-card{
+    animation:none!important;
+    transition:none!important;
+  }
+}
+
+/* responsive tweaks */
+@media(max-width:680px){
+  .hero h1{font-size:1.6rem}
+  .skill-card{width:48%}
+  .project .imgwrap{height:160px}
+}
+
+
+
+
+
