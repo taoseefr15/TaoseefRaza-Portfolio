@@ -6,10 +6,15 @@ Designed and developed from scratch with a focus on clean UI, accessibility, and
 💡 Purpose of the Project
 
 This portfolio represents:
+
 My front-end development skills
+
 My understanding of UI/UX principles
+
 Practical experience through real projects
+
 Growth mindset and continuous learning approach
+
 It is built for hackathon submission and professional use (internships, networking, showcasing work).
 
 🛠️ Tech Stack
@@ -19,6 +24,7 @@ Styling	Custom CSS (No external UI libraries except Material Icons)
 Build Tool	Vite
 Deployment	Vercel
 Version Control	Git & GitHub
+
 All components and UI elements are fully self-designed following modern product-design inspirations.
 
 🎯 Features
@@ -32,26 +38,39 @@ All components and UI elements are fully self-designed following modern product-
 ✔️ Clean layout and typography inspired by modern product websites
 
 📌 Sections Included
+
 Hero Section (Introduction + Quick Links)
+
 About Me
+
 Skills & Technologies
+
 Experience Timeline
+
 Major Projects with Tech Overview
+
 Footer with social links
 
 📫 Contact
 
 If you want to connect or collaborate:
+
 GitHub: https://github.com/taoseefr15
+
 LinkedIn: https://www.linkedin.com/in/taoseef-raza-777n/
+
 Instagram: https://www.instagram.com/taoseef.razaa
+
 X (Twitter): https://x.com/taoseefr15
 
 📌 Future Enhancements
 
 Adding more real-world projects
+
 Improving accessibility score
+
 Adding animations on scroll for additional sections
+
 Project live demos with hosting integration
 
 🙌 Acknowledgement
